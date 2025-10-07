@@ -25,8 +25,8 @@ tools=[t for t in all_tool if t.name in ('mongodb_query', 'mongodb_schema', 'mon
 agent=initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
 
 prompt = """
-Find products under $50 with tag 'smart'. 
-Return name, price, and stock.
+Which products under $100 have averge rating higher than 4.5? 
+Return name, price, stock and average rating.
 Use aggregate() with valid Python dictionary syntax (double quotes, keys quoted, '$' prefixed).
 If none found, say 'No products found'.
 """
